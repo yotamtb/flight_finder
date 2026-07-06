@@ -1,48 +1,38 @@
 import re
+from datetime import datetime
 from bs4 import BeautifulSoup
 
-
-PRICE_RE = re.compile(r"\$(\d+)")
-DATE_RE = re.compile(r"(\d{2}/\d{2})")
-
-
-def clean(text):
-    return " ".join(text.split())
+FULL_DATE_RE = re.compile(
+    r"(\d{1,2}/\d{1,2}/\d{4}\s+\d{1,2}:\d{2}:\d{2}\s+(?:AM|PM))"
+)
 
 
-def parse_price(text):
-    m = PRICE_RE.search(text)
-    return int(m.group(1)) if m else None
-
-
-def parse_dates(text):
-
-    dates = DATE_RE.findall(text)
-
-    if len(dates) >= 2:
-        return dates[0], dates[1]
-
-    return None, None
+def parse_datetime(value: str) -> str | None:
+    try:
+        dt = datetime.strptime(value, "%m/%d/%Y %I:%M:%S %p")
+        return dt.isoformat()
+    except Exception:
+        return None
 
 
 def parse_remaining(item):
 
     badge = item.select_one(".spcial_message_bottom")
 
-    if not badge:
+    if badge is None:
         return None
 
-    m = re.search(r"(\d+)", badge.get_text())
+    m = re.search(r"\d+", badge.get_text())
 
     if not m:
         return None
 
-    return int(m.group(1))
+    return int(m.group())
 
 
 def parse_offers(html):
 
-    soup = BeautifulSoup(html, "html.parser")
+    soup = BeautifulSoup(html, "lxml")
 
     offers = {}
 
@@ -50,34 +40,51 @@ def parse_offers(html):
 
         try:
 
-            offer_id = item["ite_item"]
+            destination = item.get("data_ga_item_name")
 
-            destination = clean(
-                item.select_one(".show_item_name").get_text()
-            )
+            if not destination:
+                destination = item.select_one(".show_item_name").get_text(strip=True)
 
-            price = parse_price(
-                item.select_one(".show_item_total_price").get_text()
-            )
+            raw_price = item.get("data_number_ga_price")
 
-            details = clean(
-                item.select_one(".show_item_details").get_text(" ")
-            )
+            if raw_price:
+                price = float(raw_price)
+            else:
+                text = item.select_one(".show_item_total_price").get_text(strip=True)
+                price = float(text.replace("$", "").replace(",", ""))
 
-            departure, ret = parse_dates(details)
+            raw_dates = item.get("data_ga_item_brand", "")
+
+            dates = FULL_DATE_RE.findall(raw_dates)
+
+            departure = None
+            returning = None
+
+            if len(dates) == 2:
+                returning = parse_datetime(dates[0])
+                departure = parse_datetime(dates[1])
+
+            image = None
+
+            img = item.select_one("img")
+
+            if img:
+                image = img.get("src")
 
             remaining = parse_remaining(item)
 
-            offers[offer_id] = {
+            offer_key = f"{destination}|{departure}|{returning}"
+
+            offers[offer_key] = {
                 "destination": destination,
                 "departure": departure,
-                "return": ret,
+                "return": returning,
                 "price": price,
                 "remaining": remaining,
+                "image": image,
             }
 
-        except Exception as e:
-
-            print("Could not parse offer:", e)
+        except Exception as ex:
+            print("Parser error:", ex)
 
     return offers
