@@ -1,4 +1,5 @@
 from datetime import datetime, timezone
+
 from playwright.sync_api import sync_playwright
 
 from parser import parse_offers
@@ -13,14 +14,12 @@ def utc_now():
 
 
 def merge_offers(previous, current):
-
     now = utc_now()
 
     merged = {}
-
     notifications = []
 
-    # הצעות חדשות / קיימות
+    # New / existing offers
     for key, offer in current.items():
 
         if key not in previous:
@@ -32,18 +31,14 @@ def merge_offers(previous, current):
             offer["price_history"] = [
                 {
                     "date": now,
-                    "price": offer["price"]
+                    "price": offer["price"],
                 }
             ]
 
             notifications.append(
-                f"""🆕 הצעה חדשה!
-
-📍 {offer['destination']}
-
+                f"""🆕 {offer['destination']}
 🛫 {offer['departure']}
 🛬 {offer['return']}
-
 💰 ${offer['price']}"""
             )
 
@@ -58,27 +53,28 @@ def merge_offers(previous, current):
             history = old.get("price_history", [])
 
             old_price = old.get("price")
+            new_price = offer.get("price")
 
-            if old_price != offer["price"]:
+            if (
+                old_price is not None
+                and new_price is not None
+                and old_price != new_price
+            ):
 
                 history.append(
                     {
                         "date": now,
-                        "price": offer["price"]
+                        "price": new_price,
                     }
                 )
 
-                if offer["price"] < old_price:
+                if new_price < old_price:
 
                     notifications.append(
-                        f"""📉 ירידת מחיר!
-
-📍 {offer['destination']}
-
+                        f"""📉 {offer['destination']}
 🛫 {offer['departure']}
 🛬 {offer['return']}
-
-💰 ${old_price} → ${offer['price']}"""
+💰 ${old_price} → ${new_price}"""
                     )
 
             offer["price_history"] = history
@@ -93,30 +89,27 @@ def merge_offers(previous, current):
             ):
 
                 notifications.append(
-                    f"""⚠️ פחות מקומות זמינים
-
-📍 {offer['destination']}
-
+                    f"""⚠️ {offer['destination']}
 נותרו רק {new_remaining} מקומות"""
                 )
 
         merged[key] = offer
 
-    # הצעות שנעלמו
+    # Offers that disappeared
     for key, offer in previous.items():
 
         if key in merged:
             continue
 
         offer["active"] = False
+        offer["last_seen"] = now
 
         merged[key] = offer
 
         notifications.append(
-            f"""❌ ההצעה ירדה מהאתר
+            f"""❌ ירדה מהאתר
 
 📍 {offer['destination']}
-
 🛫 {offer['departure']}
 🛬 {offer['return']}"""
         )
@@ -124,7 +117,7 @@ def merge_offers(previous, current):
     return merged, notifications
 
 
-def check_offers():
+def scan():
 
     previous = load_offers()
 
@@ -135,15 +128,25 @@ def check_offers():
             args=["--no-sandbox"],
         )
 
-        page = browser.new_page()
+        try:
 
-        page.goto(URL, wait_until="networkidle")
+            page = browser.new_page()
 
-        page.wait_for_timeout(3000)
+            page.goto(
+                URL,
+                wait_until="domcontentloaded",
+                timeout=60000,
+            )
 
-        html = page.content()
+            page.wait_for_selector(
+                "div.show_item",
+                timeout=30000,
+            )
 
-        browser.close()
+            html = page.content()
+
+        finally:
+            browser.close()
 
     current = parse_offers(html)
 
@@ -151,11 +154,28 @@ def check_offers():
 
     save_offers(merged)
 
-    for message in notifications:
-        send_message(message)
+    if notifications:
+
+        message = (
+            f"📢 Tustus Monitor\n\n"
+            f"נמצאו {len(notifications)} עדכונים:\n\n"
+            + "\n\n--------------------\n\n".join(notifications)
+        )
+
+        # Telegram מגביל ל-4096 תווים
+        if len(message) > 3900:
+            chunks = [
+                message[i:i + 3900]
+                for i in range(0, len(message), 3900)
+            ]
+
+            for chunk in chunks:
+                send_message(chunk)
+        else:
+            send_message(message)
 
     print("=" * 60)
-    print(f"Scan completed: {utc_now()}")
+    print(f"Scan time     : {utc_now()}")
     print(f"Offers online : {len(current)}")
     print(f"Offers stored : {len(merged)}")
     print(f"Notifications : {len(notifications)}")
@@ -163,4 +183,4 @@ def check_offers():
 
 
 if __name__ == "__main__":
-    check_offers()
+    scan()
