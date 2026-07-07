@@ -1,4 +1,5 @@
-from datetime import datetime, timezone
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 from playwright.sync_api import sync_playwright
 
@@ -9,12 +10,33 @@ from telegram import send_message
 URL = "https://www.tustus.co.il/Arkia/Home"
 
 
-def utc_now():
-    return datetime.now(timezone.utc).isoformat()
+def local_now():
+    return datetime.now(ZoneInfo("Asia/Jerusalem")).isoformat()
+
+
+def date_range_text(departure, return_date):
+    try:
+        start = datetime.fromisoformat(departure)
+        end = datetime.fromisoformat(return_date)
+
+        weekdays = [
+            "שני",
+            "שלישי",
+            "רביעי",
+            "חמישי",
+            "שישי",
+            "שבת",
+            "ראשון",
+        ]
+
+        return f"{weekdays[start.weekday()]} עד {weekdays[end.weekday()]}"
+
+    except Exception:
+        return ""
 
 
 def merge_offers(previous, current):
-    now = utc_now()
+    now = local_now()
 
     merged = {}
     notifications = []
@@ -39,6 +61,7 @@ def merge_offers(previous, current):
                 f"""🆕 {offer['destination']}
 🛫 {offer['departure']}
 🛬 {offer['return']}
+📅 {date_range_text(offer['departure'], offer['return'])}
 💰 ${offer['price']}"""
             )
 
@@ -55,16 +78,13 @@ def merge_offers(previous, current):
 📍 {offer['destination']}
 🛫 {offer['departure']}
 🛬 {offer['return']}
+📅 {date_range_text(offer['departure'], offer['return'])}
 💰 ${offer['price']}"""
                 )
 
             offer["first_seen"] = old.get("first_seen", now)
             offer["last_seen"] = now
             offer["active"] = True
-
-            # אם חזרה - אין צורך יותר ב-last_seen של ההיעלמות
-            offer.pop("last_seen", None)
-            offer["last_seen"] = now
 
             history = old.get("price_history", [])
 
@@ -88,8 +108,10 @@ def merge_offers(previous, current):
 
                     notifications.append(
                         f"""📉 {offer['destination']}
+
 🛫 {offer['departure']}
 🛬 {offer['return']}
+📅 {date_range_text(offer['departure'], offer['return'])}
 💰 ${old_price} → ${new_price}"""
                     )
 
@@ -106,6 +128,8 @@ def merge_offers(previous, current):
 
                 notifications.append(
                     f"""⚠️ {offer['destination']}
+
+📅 {date_range_text(offer['departure'], offer['return'])}
 נותרו רק {new_remaining} מקומות"""
                 )
 
@@ -118,7 +142,7 @@ def merge_offers(previous, current):
         if key in merged:
             continue
 
-        # כבר סימנו אותה בעבר כלא פעילה - לא להתריע שוב
+        # כבר סימנו אותה בעבר כלא פעילה
         if not offer.get("active", True):
             merged[key] = offer
             continue
@@ -134,7 +158,8 @@ def merge_offers(previous, current):
 
 📍 {offer['destination']}
 🛫 {offer['departure']}
-🛬 {offer['return']}"""
+🛬 {offer['return']}
+📅 {date_range_text(offer['departure'], offer['return'])}"""
         )
 
     return merged, notifications
@@ -200,7 +225,7 @@ def scan():
             send_message(message)
 
     print("=" * 60)
-    print(f"Scan time     : {utc_now()}")
+    print(f"Scan time     : {local_now()}")
     print(f"Offers online : {len(current)}")
     print(f"Offers stored : {len(merged)}")
     print(f"Notifications : {len(notifications)}")
