@@ -46,9 +46,25 @@ def merge_offers(previous, current):
 
             old = previous[key]
 
+            # הצעה שחזרה אחרי שנעלמה
+            if not old.get("active", True):
+
+                notifications.append(
+                    f"""🔄 חזרה לאתר
+
+📍 {offer['destination']}
+🛫 {offer['departure']}
+🛬 {offer['return']}
+💰 ${offer['price']}"""
+                )
+
             offer["first_seen"] = old.get("first_seen", now)
             offer["last_seen"] = now
             offer["active"] = True
+
+            # אם חזרה - אין צורך יותר ב-last_seen של ההיעלמות
+            offer.pop("last_seen", None)
+            offer["last_seen"] = now
 
             history = old.get("price_history", [])
 
@@ -98,9 +114,16 @@ def merge_offers(previous, current):
     # Offers that disappeared
     for key, offer in previous.items():
 
+        # עדיין קיימת באתר
         if key in merged:
             continue
 
+        # כבר סימנו אותה בעבר כלא פעילה - לא להתריע שוב
+        if not offer.get("active", True):
+            merged[key] = offer
+            continue
+
+        # זו הפעם הראשונה שהיא נעלמה
         offer["active"] = False
         offer["last_seen"] = now
 
@@ -164,6 +187,7 @@ def scan():
 
         # Telegram מגביל ל-4096 תווים
         if len(message) > 3900:
+
             chunks = [
                 message[i:i + 3900]
                 for i in range(0, len(message), 3900)
@@ -171,6 +195,7 @@ def scan():
 
             for chunk in chunks:
                 send_message(chunk)
+
         else:
             send_message(message)
 
