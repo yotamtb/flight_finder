@@ -1,5 +1,5 @@
 {
-  "last_scan": "2026-07-10T23:29:16.643562+00:00",
+  "last_scan": "2026-07-11T00:57:54.777359+00:00",
   "offers": {
     "אלבניה - טיראנה|2026-07-07T16:55:00|2026-07-09T23:30:00": {
       "active": false,
@@ -176,8 +176,8 @@
       "departure": "2026-07-11T17:40:00",
       "destination": "אלבניה - טיראנה",
       "first_seen": "2026-07-08T13:29:25.918705+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/416f4416-25f2-41a9-953b-97a4202c4b65.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/ee5cc53f-a022-46c9-b8ad-af78e6dc53ca.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -193,8 +193,8 @@
       "departure": "2026-07-11T17:40:00",
       "destination": "אלבניה - טיראנה",
       "first_seen": "2026-07-08T13:29:25.918705+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/416f4416-25f2-41a9-953b-97a4202c4b65.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/ee5cc53f-a022-46c9-b8ad-af78e6dc53ca.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -295,8 +295,8 @@
       "departure": "2026-07-11T20:25:00",
       "destination": "אתונה - יוון",
       "first_seen": "2026-07-07T11:33:56.346317+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/f8e636ac-4478-4e99-a86f-46865f23711e.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/b30708b1-cdc8-4e6c-add1-d43fe50308c4.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -312,8 +312,8 @@
       "departure": "2026-07-11T20:25:00",
       "destination": "אתונה - יוון",
       "first_seen": "2026-07-07T11:33:56.346317+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/dba6c35b-1405-4fc6-afa6-181a18e6c628.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/b30708b1-cdc8-4e6c-add1-d43fe50308c4.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -347,7 +347,7 @@
       "destination": "בודפשט - הונגריה",
       "first_seen": "2026-07-07T11:33:56.346317+03:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/b0d5af4b-f3d1-4c84-b674-cbd46d294934.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -363,8 +363,8 @@
       "departure": "2026-07-11T19:45:00",
       "destination": "בודפשט - הונגריה",
       "first_seen": "2026-07-10T18:38:55.266075+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/65b7868d-8e98-4c8b-8aed-2d84e24dbccb.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/b0d5af4b-f3d1-4c84-b674-cbd46d294934.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -466,7 +466,7 @@
       "destination": "טיווט - מונטנגרו",
       "first_seen": "2026-07-10T18:55:45.144682+03:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/def1e194-5463-4168-8827-75360475c316.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -584,8 +584,8 @@
       "departure": "2026-07-11T16:20:00",
       "destination": "כרתים - יוון",
       "first_seen": "2026-07-07T11:33:56.346317+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/f0f868d5-2a3a-4ab5-afde-5cfe390e010d.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/4edbdccd-4e19-4302-b058-582dab7e3944.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -601,8 +601,8 @@
       "departure": "2026-07-11T16:20:00",
       "destination": "כרתים - יוון",
       "first_seen": "2026-07-08T15:48:28.700778+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/0ca38d3f-bc0f-4125-b7f8-46d4b99f0a11.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/4edbdccd-4e19-4302-b058-582dab7e3944.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -618,8 +618,8 @@
       "departure": "2026-07-12T17:40:00",
       "destination": "כרתים - יוון",
       "first_seen": "2026-07-10T18:38:55.266075+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/0ca38d3f-bc0f-4125-b7f8-46d4b99f0a11.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/f0f868d5-2a3a-4ab5-afde-5cfe390e010d.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -636,7 +636,7 @@
       "destination": "כרתים - יוון",
       "first_seen": "2026-07-10T18:38:55.266075+03:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/4edbdccd-4e19-4302-b058-582dab7e3944.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -856,8 +856,8 @@
       "departure": "2026-07-11T23:30:00",
       "destination": "לרנקה - קפריסין",
       "first_seen": "2026-07-07T11:33:56.346317+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/c0c9d48d-f8f8-481b-abbb-bbde5a2357ce.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/239edd0f-25e2-4f39-bff3-0c8432d093cd.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 100.0,
       "price_history": [
         {
@@ -874,7 +874,7 @@
       "destination": "לרנקה - קפריסין",
       "first_seen": "2026-07-07T11:33:56.346317+03:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/c0c9d48d-f8f8-481b-abbb-bbde5a2357ce.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 100.0,
       "price_history": [
         {
@@ -891,7 +891,7 @@
       "destination": "לרנקה - קפריסין",
       "first_seen": "2026-07-10T18:38:55.266075+03:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/c0c9d48d-f8f8-481b-abbb-bbde5a2357ce.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 300.0,
       "price_history": [
         {
@@ -907,8 +907,8 @@
       "departure": "2026-07-11T23:30:00",
       "destination": "לרנקה - קפריסין",
       "first_seen": "2026-07-07T11:33:56.346317+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/15b459ae-be59-491c-a451-891bd5fef104.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/c0c9d48d-f8f8-481b-abbb-bbde5a2357ce.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 100.0,
       "price_history": [
         {
@@ -954,12 +954,12 @@
       "return": "2026-07-13T23:50:00"
     },
     "מינכן - גרמניה|2026-07-11T11:15:00|2026-07-15T12:45:00": {
-      "active": true,
+      "active": false,
       "departure": "2026-07-11T11:15:00",
       "destination": "מינכן - גרמניה",
       "first_seen": "2026-07-07T11:33:56.346317+03:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/f0d0a619-0200-4c5f-aea4-3531ef5d678f.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -1043,8 +1043,8 @@
       "departure": "2026-07-11T22:20:00",
       "destination": "סלוניקי - יוון",
       "first_seen": "2026-07-08T18:30:19.962435+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/6cc82be4-c266-456e-aaea-4e8f757ec485.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/9beb6dd4-ab99-4a99-96b3-0eadacc929c9.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -1060,8 +1060,8 @@
       "departure": "2026-07-11T22:20:00",
       "destination": "סלוניקי - יוון",
       "first_seen": "2026-07-07T14:25:17.722421+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/6cc82be4-c266-456e-aaea-4e8f757ec485.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/9beb6dd4-ab99-4a99-96b3-0eadacc929c9.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -1077,8 +1077,8 @@
       "departure": "2026-07-12T12:25:00",
       "destination": "סלוניקי - יוון",
       "first_seen": "2026-07-10T18:38:55.266075+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/a37d4490-06bc-4e70-991a-2d7450fa4bf3.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/d05c7c5d-dde7-42db-ab4e-af1e318101a4.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -1094,8 +1094,8 @@
       "departure": "2026-07-12T12:25:00",
       "destination": "סלוניקי - יוון",
       "first_seen": "2026-07-10T18:38:55.266075+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/a37d4490-06bc-4e70-991a-2d7450fa4bf3.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/d05c7c5d-dde7-42db-ab4e-af1e318101a4.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -1111,8 +1111,8 @@
       "departure": "2026-07-13T20:10:00",
       "destination": "פראג - צ'כיה",
       "first_seen": "2026-07-10T18:38:55.266075+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/99ce6b8b-7b92-47f1-931c-c1b9e0dba339.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/32d53794-6368-4156-b992-da5335623b40.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -1162,8 +1162,8 @@
       "departure": "2026-07-11T19:40:00",
       "destination": "קורפו - יוון",
       "first_seen": "2026-07-10T18:38:55.266075+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/ae45e5fc-2a3c-483a-a1ec-99987ad91d11.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/189af151-2aa3-467d-8a73-a41bee256be5.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -1179,8 +1179,8 @@
       "departure": "2026-07-11T19:40:00",
       "destination": "קורפו - יוון",
       "first_seen": "2026-07-09T14:27:00.141826+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/ae45e5fc-2a3c-483a-a1ec-99987ad91d11.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/189af151-2aa3-467d-8a73-a41bee256be5.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -1230,8 +1230,8 @@
       "departure": "2026-07-12T09:55:00",
       "destination": "קלמטה - יוון",
       "first_seen": "2026-07-10T18:38:55.266075+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/1e084fc7-b006-479f-b055-19ade69f29b3.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/eb27522d-ee52-4648-96dd-5292d12be886.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -1332,8 +1332,8 @@
       "departure": "2026-07-11T15:45:00",
       "destination": "רודוס - יוון",
       "first_seen": "2026-07-10T18:38:55.266075+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/9913c3cf-007b-42f8-9ff8-d06f65ff2404.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/04d8cd3d-b035-4916-97ac-ba949bf50ddd.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 100.0,
       "price_history": [
         {
@@ -1383,8 +1383,8 @@
       "departure": "2026-07-11T15:45:00",
       "destination": "רודוס - יוון",
       "first_seen": "2026-07-09T17:06:03.803982+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/9913c3cf-007b-42f8-9ff8-d06f65ff2404.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/04d8cd3d-b035-4916-97ac-ba949bf50ddd.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 100.0,
       "price_history": [
         {
@@ -1400,8 +1400,8 @@
       "departure": "2026-07-13T15:20:00",
       "destination": "רודוס - יוון",
       "first_seen": "2026-07-10T18:38:55.266075+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/a25512ab-4029-4d8e-be9c-0a6cdc547693.jpg",
-      "last_seen": "2026-07-11T02:29:16.643498+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/c4f1eb57-68c3-496a-918a-8574f1fa0907.jpg",
+      "last_seen": "2026-07-11T03:57:54.777271+03:00",
       "price": 100.0,
       "price_history": [
         {
