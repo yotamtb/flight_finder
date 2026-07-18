@@ -186,10 +186,8 @@ def scan():
                 timeout=60000,
             )
 
-            page.wait_for_selector(
-                "div.show_item",
-                timeout=30000,
-            )
+            # המתנה קצרה כדי לתת ל-JavaScript של האתר להיטען
+            page.wait_for_timeout(5000)
 
             html = page.content()
 
@@ -197,6 +195,14 @@ def scan():
             browser.close()
 
     current = parse_offers(html)
+
+    if not current:
+
+        send_message(
+            """📭 Tustus Monitor
+
+    כרגע אין כלל הצעות באתר."""
+        )
 
     merged, notifications = merge_offers(previous, current)
 
