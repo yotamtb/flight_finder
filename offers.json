@@ -1,5 +1,5 @@
 {
-  "last_scan": "2026-07-28T06:36:00.079335+00:00",
+  "last_scan": "2026-07-28T07:14:14.065210+00:00",
   "offers": {
     "אלבניה - טיראנה|2026-07-07T16:55:00|2026-07-09T23:30:00": {
       "active": false,
@@ -771,8 +771,8 @@
       "departure": "2026-07-28T23:20:00",
       "destination": "אתונה - יוון",
       "first_seen": "2026-07-26T18:14:41.410480+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/dba6c35b-1405-4fc6-afa6-181a18e6c628.jpg",
-      "last_seen": "2026-07-28T09:36:00.079259+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/f8e636ac-4478-4e99-a86f-46865f23711e.jpg",
+      "last_seen": "2026-07-28T10:14:14.065131+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -3457,8 +3457,8 @@
       "departure": "2026-07-28T22:45:00",
       "destination": "לרנקה - קפריסין",
       "first_seen": "2026-07-27T20:50:47.171245+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/15b459ae-be59-491c-a451-891bd5fef104.jpg",
-      "last_seen": "2026-07-28T09:36:00.079259+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/d85a8f6c-5ec8-4ed4-9371-fa108d49a638.jpg",
+      "last_seen": "2026-07-28T10:14:14.065131+03:00",
       "price": 100.0,
       "price_history": [
         {
@@ -3466,7 +3466,7 @@
           "price": 100.0
         }
       ],
-      "remaining": 5,
+      "remaining": 4,
       "return": "2026-08-01T08:20:00"
     },
     "מילאנו - איטליה|2026-07-09T09:15:00|2026-07-12T10:45:00": {
