@@ -1,5 +1,5 @@
 {
-  "last_scan": "2026-08-05T08:02:18.684120+00:00",
+  "last_scan": "2026-08-05T09:43:57.497897+00:00",
   "offers": {
     "אלבניה - טיראנה|2026-07-07T16:55:00|2026-07-09T23:30:00": {
       "active": false,
@@ -1128,8 +1128,8 @@
       "departure": "2026-08-07T08:15:00",
       "destination": "בלגרד - סרביה",
       "first_seen": "2026-08-03T21:00:53.971720+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/97794a63-a379-4d1e-aed1-9821569e0ff4.jpg",
-      "last_seen": "2026-08-05T11:02:18.684036+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/c3d30e66-5dc3-4264-8c0c-eb77d27f313a.jpg",
+      "last_seen": "2026-08-05T12:43:57.497812+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -1689,8 +1689,8 @@
       "departure": "2026-08-06T15:40:00",
       "destination": "טיווט - מונטנגרו",
       "first_seen": "2026-08-04T20:13:08.964185+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/3f77ef1a-66c1-4268-bb06-3b67c5b809c1.jpg",
-      "last_seen": "2026-08-05T11:02:18.684036+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/ee672970-8021-4a06-854c-d1f4661fbae9.jpg",
+      "last_seen": "2026-08-05T12:43:57.497812+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -5204,12 +5204,12 @@
       "return": "2026-08-05T21:15:00"
     },
     "סלוניקי - יוון|2026-08-05T20:15:00|2026-08-08T23:35:00": {
-      "active": true,
+      "active": false,
       "departure": "2026-08-05T20:15:00",
       "destination": "סלוניקי - יוון",
       "first_seen": "2026-08-03T21:00:53.971720+03:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/52dd471f-ec28-4197-8863-c343c550559d.jpg",
-      "last_seen": "2026-08-05T11:02:18.684036+03:00",
+      "last_seen": "2026-08-05T12:43:57.497812+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -6156,12 +6156,12 @@
       "return": "2026-08-07T10:30:00"
     },
     "קורפו - יוון|2026-08-05T19:20:00|2026-08-07T10:30:00": {
-      "active": true,
+      "active": false,
       "departure": "2026-08-05T19:20:00",
       "destination": "קורפו - יוון",
       "first_seen": "2026-08-02T14:42:54.384864+03:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/37768bea-9a3a-4fd3-9338-4d1618260dc1.jpg",
-      "last_seen": "2026-08-05T11:02:18.684036+03:00",
+      "last_seen": "2026-08-05T12:43:57.497812+03:00",
       "price": 150.0,
       "price_history": [
         {
