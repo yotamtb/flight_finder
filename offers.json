@@ -1,5 +1,5 @@
 {
-  "last_scan": "2026-08-09T23:01:01.610633+00:00",
+  "last_scan": "2026-08-09T23:40:52.087525+00:00",
   "offers": {
     "אלבניה - טיראנה|2026-07-07T16:55:00|2026-07-09T23:30:00": {
       "active": false,
@@ -1825,8 +1825,8 @@
       "departure": "2026-08-11T07:00:00",
       "destination": "טיווט - מונטנגרו",
       "first_seen": "2026-08-09T17:09:35.561883+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/97cc8f06-9d4d-431a-a21f-5613ba944f6a.jpg",
-      "last_seen": "2026-08-10T02:01:01.610542+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/def1e194-5463-4168-8827-75360475c316.jpg",
+      "last_seen": "2026-08-10T02:40:52.087434+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -1842,8 +1842,8 @@
       "departure": "2026-08-11T07:00:00",
       "destination": "טיווט - מונטנגרו",
       "first_seen": "2026-08-09T17:09:35.561883+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/97cc8f06-9d4d-431a-a21f-5613ba944f6a.jpg",
-      "last_seen": "2026-08-10T02:01:01.610542+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/def1e194-5463-4168-8827-75360475c316.jpg",
+      "last_seen": "2026-08-10T02:40:52.087434+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -3220,7 +3220,7 @@
       "destination": "כרתים - יוון",
       "first_seen": "2026-08-09T13:46:21.818387+03:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/a341eb0d-8099-4d75-8502-29cb8fd237ac.jpg",
-      "last_seen": "2026-08-10T02:01:01.610542+03:00",
+      "last_seen": "2026-08-10T02:40:52.087434+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -3237,7 +3237,7 @@
       "destination": "כרתים - יוון",
       "first_seen": "2026-08-09T13:46:21.818387+03:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/a341eb0d-8099-4d75-8502-29cb8fd237ac.jpg",
-      "last_seen": "2026-08-10T02:01:01.610542+03:00",
+      "last_seen": "2026-08-10T02:40:52.087434+03:00",
       "price": 150.0,
       "price_history": [
         {
