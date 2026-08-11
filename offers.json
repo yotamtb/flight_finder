@@ -1,5 +1,5 @@
 {
-  "last_scan": "2026-08-11T06:28:13.938992+00:00",
+  "last_scan": "2026-08-11T07:22:56.732234+00:00",
   "offers": {
     "אלבניה - טיראנה|2026-07-07T16:55:00|2026-07-09T23:30:00": {
       "active": false,
@@ -1044,7 +1044,7 @@
       "destination": "אתונה - יוון",
       "first_seen": "2026-08-10T16:36:34.487456+03:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/dba6c35b-1405-4fc6-afa6-181a18e6c628.jpg",
-      "last_seen": "2026-08-11T09:28:13.938904+03:00",
+      "last_seen": "2026-08-11T10:22:56.732145+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -6857,8 +6857,8 @@
       "departure": "2026-08-11T19:25:00",
       "destination": "קורפו - יוון",
       "first_seen": "2026-08-10T16:36:34.487456+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/ae45e5fc-2a3c-483a-a1ec-99987ad91d11.jpg",
-      "last_seen": "2026-08-11T09:28:13.938904+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/7f708800-14a3-4b8a-8250-6e1469464b5e.jpg",
+      "last_seen": "2026-08-11T10:22:56.732145+03:00",
       "price": 150.0,
       "price_history": [
         {
