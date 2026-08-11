@@ -1,5 +1,5 @@
 {
-  "last_scan": "2026-08-11T09:10:44.441426+00:00",
+  "last_scan": "2026-08-11T09:32:01.132393+00:00",
   "offers": {
     "אלבניה - טיראנה|2026-07-07T16:55:00|2026-07-09T23:30:00": {
       "active": false,
@@ -1044,7 +1044,7 @@
       "destination": "אתונה - יוון",
       "first_seen": "2026-08-10T16:36:34.487456+03:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/f8e636ac-4478-4e99-a86f-46865f23711e.jpg",
-      "last_seen": "2026-08-11T12:10:44.441333+03:00",
+      "last_seen": "2026-08-11T12:32:01.132289+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -3259,6 +3259,40 @@
       "price_history": [
         {
           "date": "2026-08-09T13:46:21.818387+03:00",
+          "price": 150.0
+        }
+      ],
+      "remaining": 5,
+      "return": "2026-08-14T18:00:00"
+    },
+    "כרתים - יוון|2026-08-12T09:00:00|2026-08-14T18:00:00": {
+      "active": true,
+      "departure": "2026-08-12T09:00:00",
+      "destination": "כרתים - יוון",
+      "first_seen": "2026-08-11T12:32:01.132289+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/f0f868d5-2a3a-4ab5-afde-5cfe390e010d.jpg",
+      "last_seen": "2026-08-11T12:32:01.132289+03:00",
+      "price": 150.0,
+      "price_history": [
+        {
+          "date": "2026-08-11T12:32:01.132289+03:00",
+          "price": 150.0
+        }
+      ],
+      "remaining": 5,
+      "return": "2026-08-14T18:00:00"
+    },
+    "כרתים - יוון|2026-08-12T18:55:00|2026-08-14T18:00:00": {
+      "active": true,
+      "departure": "2026-08-12T18:55:00",
+      "destination": "כרתים - יוון",
+      "first_seen": "2026-08-11T12:32:01.132289+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/4edbdccd-4e19-4302-b058-582dab7e3944.jpg",
+      "last_seen": "2026-08-11T12:32:01.132289+03:00",
+      "price": 150.0,
+      "price_history": [
+        {
+          "date": "2026-08-11T12:32:01.132289+03:00",
           "price": 150.0
         }
       ],
