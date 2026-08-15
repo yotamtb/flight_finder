@@ -196,13 +196,57 @@ def scan():
 
     current = parse_offers(html)
 
+    # ---------------------------------------------------------
+    # No offers
+    # ---------------------------------------------------------
+
     if not current:
 
-        send_message(
-            """📭 Tustus Monitor
+        # אם כבר ידענו שהאתר ריק בסריקה הקודמת,
+        # לא שולחים שוב התראה.
+        site_was_empty = previous.get("_site_empty", False)
 
-    כרגע אין כלל הצעות באתר."""
+        previous["_site_empty"] = True
+
+        if not site_was_empty:
+
+            send_message(
+                """📭 Tustus Monitor
+
+כרגע אין כלל הצעות באתר."""
+            )
+
+        # לא מעדכנים active של אף הצעה!
+        save_offers(previous)
+
+        print("=" * 60)
+        print(f"Scan time     : {local_now()}")
+        print("Offers online : 0")
+        print(f"Offers stored : {len(previous) - 1}")
+        print("Notifications : 0")
+        print("Status        : Site is empty")
+        print("=" * 60)
+
+        return
+
+    # ---------------------------------------------------------
+    # Offers returned after empty site
+    # ---------------------------------------------------------
+
+    site_was_empty = previous.pop("_site_empty", False)
+
+    if site_was_empty:
+
+        send_message(
+            f"""🟢 Tustus Monitor
+
+חזרו הצעות לאתר.
+נמצאו כרגע {len(current)} הצעות."""
         )
+
+    # ---------------------------------------------------------
+    # Normal merge
+    # ---------------------------------------------------------
 
     merged, notifications = merge_offers(previous, current)
 
