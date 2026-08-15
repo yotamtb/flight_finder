@@ -2,7 +2,7 @@ import os
 import requests
 
 BOT_TOKEN = os.environ.get("TELEGRAM_TOKEN")
-CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
+CHAT_IDS = os.environ.get("TELEGRAM_CHAT_ID", "").split(",")
 
 
 def send_message(message: str) -> bool:
@@ -12,7 +12,7 @@ def send_message(message: str) -> bool:
     Returns True on success, False otherwise.
     """
 
-    if not BOT_TOKEN or not CHAT_ID:
+    if not BOT_TOKEN or not CHAT_IDS:
         print("Telegram is not configured.")
         return False
 
@@ -20,17 +20,18 @@ def send_message(message: str) -> bool:
 
     try:
 
-        response = requests.post(
-            url,
-            json={
-                "chat_id": CHAT_ID,
-                "text": message,
-                "disable_web_page_preview": True,
-            },
-            timeout=20,
-        )
+        for chat_id in CHAT_IDS:
+            response = requests.post(
+                url,
+                json={
+                    "chat_id": chat_id,
+                    "text": message,
+                    "disable_web_page_preview": True,
+                },
+                timeout=20,
+            )
 
-        response.raise_for_status()
+            response.raise_for_status()
 
         return True
 
