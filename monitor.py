@@ -35,6 +35,14 @@ def date_range_text(departure, return_date):
         return ""
 
 
+def format_offer(offer, prefix="🆕"):
+    return f"""{prefix} {offer['destination']}
+🛫 {offer['departure']}
+🛬 {offer['return']}
+📅 {date_range_text(offer['departure'], offer['return'])}
+💰 ${offer['price']}"""
+
+
 def merge_offers(previous, current):
     now = local_now()
 
@@ -58,11 +66,7 @@ def merge_offers(previous, current):
             ]
 
             notifications.append(
-                f"""🆕 {offer['destination']}
-🛫 {offer['departure']}
-🛬 {offer['return']}
-📅 {date_range_text(offer['departure'], offer['return'])}
-💰 ${offer['price']}"""
+                format_offer(offer)
             )
 
         else:
@@ -73,13 +77,7 @@ def merge_offers(previous, current):
             if not old.get("active", True):
 
                 notifications.append(
-                    f"""🔄 חזרה לאתר
-
-📍 {offer['destination']}
-🛫 {offer['departure']}
-🛬 {offer['return']}
-📅 {date_range_text(offer['departure'], offer['return'])}
-💰 ${offer['price']}"""
+                    format_offer(offer, "🔄")
                 )
 
             offer["first_seen"] = old.get("first_seen", now)
@@ -138,6 +136,10 @@ def merge_offers(previous, current):
     # Offers that disappeared
     for key, offer in previous.items():
 
+        # שדה פנימי שאינו הצעה
+        if key == "_site_empty":
+            continue
+
         # עדיין קיימת באתר
         if key in merged:
             continue
@@ -163,6 +165,31 @@ def merge_offers(previous, current):
         )
 
     return merged, notifications
+
+
+def send_notifications(notifications):
+    if not notifications:
+        return
+
+    message = (
+        f"📢 Tustus Monitor\n\n"
+        f"נמצאו {len(notifications)} עדכונים:\n\n"
+        + "\n\n--------------------\n\n".join(notifications)
+    )
+
+    # Telegram מגביל ל-4096 תווים
+    if len(message) > 3900:
+
+        chunks = [
+            message[i:i + 3900]
+            for i in range(0, len(message), 3900)
+        ]
+
+        for chunk in chunks:
+            send_message(chunk)
+
+    else:
+        send_message(message)
 
 
 def scan():
@@ -216,7 +243,7 @@ def scan():
 כרגע אין כלל הצעות באתר."""
             )
 
-        # לא מעדכנים active של אף הצעה!
+        # לא מעדכנים active של אף הצעה
         save_offers(previous)
 
         print("=" * 60)
@@ -230,19 +257,10 @@ def scan():
         return
 
     # ---------------------------------------------------------
-    # Offers returned after empty site
+    # Site was empty and offers returned
     # ---------------------------------------------------------
 
     site_was_empty = previous.pop("_site_empty", False)
-
-    if site_was_empty:
-
-        send_message(
-            f"""🟢 Tustus Monitor
-
-חזרו הצעות לאתר.
-נמצאו כרגע {len(current)} הצעות."""
-        )
 
     # ---------------------------------------------------------
     # Normal merge
@@ -252,15 +270,36 @@ def scan():
 
     save_offers(merged)
 
-    if notifications:
+    # ---------------------------------------------------------
+    # Site returned
+    #
+    # במקרה שהאתר היה ריק, אנחנו רוצים הודעה מפורטת
+    # עם ההצעות שחזרו.
+    #
+    # אם ההצעות כבר היו קיימות ב-previous, הן לא ייחשבו
+    # "חדשות" על ידי merge_offers. לכן כאן אנחנו מוסיפים
+    # הודעה נפרדת עם ההצעות הנוכחיות.
+    # ---------------------------------------------------------
+
+    if site_was_empty:
+
+        returned_offers = list(current.values())
+
+        returned_notifications = [
+            format_offer(offer)
+            for offer in returned_offers
+        ]
 
         message = (
-            f"📢 Tustus Monitor\n\n"
-            f"נמצאו {len(notifications)} עדכונים:\n\n"
-            + "\n\n--------------------\n\n".join(notifications)
+            f"🟢 Tustus Monitor\n\n"
+            f"חזרו הצעות לאתר!\n\n"
+            f"נמצאו {len(returned_offers)} "
+            f"{'הצעה' if len(returned_offers) == 1 else 'הצעות'}:\n\n"
+            + "\n\n--------------------\n\n".join(
+                returned_notifications
+            )
         )
 
-        # Telegram מגביל ל-4096 תווים
         if len(message) > 3900:
 
             chunks = [
@@ -273,6 +312,12 @@ def scan():
 
         else:
             send_message(message)
+
+    # ---------------------------------------------------------
+    # Other notifications
+    # ---------------------------------------------------------
+
+    send_notifications(notifications)
 
     print("=" * 60)
     print(f"Scan time     : {local_now()}")
