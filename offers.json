@@ -1,7 +1,6 @@
 {
-  "last_scan": "2026-08-18T10:56:50.932405+00:00",
+  "last_scan": "2026-08-18T11:35:00.656408+00:00",
   "offers": {
-    "_site_empty": true,
     "אלבניה - טיראנה|2026-07-07T16:55:00|2026-07-09T23:30:00": {
       "active": false,
       "departure": "2026-07-07T16:55:00",
@@ -1108,12 +1107,12 @@
       "return": "2026-07-18T22:50:00"
     },
     "בודפשט - הונגריה|2026-08-20T06:00:00|2026-08-22T19:00:00": {
-      "active": true,
+      "active": false,
       "departure": "2026-08-20T06:00:00",
       "destination": "בודפשט - הונגריה",
       "first_seen": "2026-08-17T10:33:00.745347+03:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/6d0f21b2-e848-4927-9ad0-bc06207ac002.jpg",
-      "last_seen": "2026-08-17T14:51:29.739838+03:00",
+      "last_seen": "2026-08-18T14:35:00.656313+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -7351,8 +7350,8 @@
       "departure": "2026-08-19T08:00:00",
       "destination": "קורפו - יוון",
       "first_seen": "2026-08-17T11:09:31.706259+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/7f708800-14a3-4b8a-8250-6e1469464b5e.jpg",
-      "last_seen": "2026-08-17T14:51:29.739838+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/ccfb8c65-b6d7-46c5-8ecd-23bebcb5c8e9.jpg",
+      "last_seen": "2026-08-18T14:35:00.656313+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -7360,7 +7359,24 @@
           "price": 150.0
         }
       ],
-      "remaining": 4,
+      "remaining": 2,
+      "return": "2026-08-21T10:30:00"
+    },
+    "קורפו - יוון|2026-08-19T16:45:00|2026-08-21T10:30:00": {
+      "active": true,
+      "departure": "2026-08-19T16:45:00",
+      "destination": "קורפו - יוון",
+      "first_seen": "2026-08-18T14:35:00.656313+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/ccfb8c65-b6d7-46c5-8ecd-23bebcb5c8e9.jpg",
+      "last_seen": "2026-08-18T14:35:00.656313+03:00",
+      "price": 150.0,
+      "price_history": [
+        {
+          "date": "2026-08-18T14:35:00.656313+03:00",
+          "price": 150.0
+        }
+      ],
+      "remaining": null,
       "return": "2026-08-21T10:30:00"
     },
     "קלמטה - יוון|2026-07-09T10:15:00|2026-07-12T10:55:00": {
