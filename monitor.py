@@ -42,6 +42,10 @@ def format_offer(offer, prefix="🆕"):
 📅 {date_range_text(offer['departure'], offer['return'])}
 💰 ${offer['price']}"""
 
+    if offer.get("remaining") is not None:
+        message += f"\n🎟️ נותרו {offer['remaining']} מקומות"
+
+    return message
 
 def merge_offers(previous, current):
     now = local_now()
