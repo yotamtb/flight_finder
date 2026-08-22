@@ -386,8 +386,8 @@ def main():
     #     sys.exit(1)
 
     github_file = '/Users/yotam.tayeb/workspace/myProjects/flight_finder/github_offers.json'
-    local_file = '/Users/yotam.tayeb/workspace/myProjects/flight_finder/local_offers.json'
-    output_file = '/offers.json'
+    local_file = '/Users/yotam.tayeb/workspace/myProjects/flight_finder/local_merged_offers.json'
+    output_file = '/Users/yotam.tayeb/workspace/myProjects/flight_finder/github_merged_offers.json'
 
     print("Loading files...")
 

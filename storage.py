@@ -1,12 +1,8 @@
 import json
 from pathlib import Path
-from datetime import datetime, timezone
+
 
 DATA_FILE = Path("offers.json")
-
-
-def utc_now():
-    return datetime.now(timezone.utc).isoformat()
 
 
 def load_data():
@@ -15,14 +11,12 @@ def load_data():
 
     Returns:
     {
-        "last_scan": "...",
         "offers": { ... }
     }
     """
 
     if not DATA_FILE.exists():
         return {
-            "last_scan": None,
             "offers": {}
         }
 
@@ -35,15 +29,11 @@ def load_data():
         if "offers" not in data:
             data["offers"] = {}
 
-        if "last_scan" not in data:
-            data["last_scan"] = None
-
         return data
 
     except Exception:
 
         return {
-            "last_scan": None,
             "offers": {}
         }
 
@@ -58,11 +48,10 @@ def load_offers():
 
 def save_offers(offers):
     """
-    Saves offers while updating last_scan.
+    Saves offers.
     """
 
     data = {
-        "last_scan": utc_now(),
         "offers": offers
     }
 
