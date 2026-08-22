@@ -36,7 +36,7 @@ def date_range_text(departure, return_date):
 
 
 def format_offer(offer, prefix="🆕"):
-    return f"""{prefix} {offer['destination']}
+    message = f"""{prefix} {offer['destination']}
 🛫 {offer['departure']}
 🛬 {offer['return']}
 📅 {date_range_text(offer['departure'], offer['return'])}
