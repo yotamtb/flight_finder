@@ -3,9 +3,9 @@ from zoneinfo import ZoneInfo
 
 from playwright.sync_api import sync_playwright
 
-from parser import parse_offers
-from storage import load_offers, save_offers
-from telegram import send_message
+from tustus.parser import parse_offers
+from tustus.storage import load_offers, save_offers
+from utils.telegram import send_message
 
 URL = "https://www.tustus.co.il/Arkia/Home"
 
@@ -329,7 +329,3 @@ def scan():
     print(f"Offers stored : {len(merged)}")
     print(f"Notifications : {len(notifications)}")
     print("=" * 60)
-
-
-if __name__ == "__main__":
-    scan()

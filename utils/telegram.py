@@ -1,13 +1,23 @@
 import os
+
 import requests
 
+
 BOT_TOKEN = os.environ.get("TELEGRAM_TOKEN")
-CHAT_IDS = os.environ.get("TELEGRAM_CHAT_ID", "").split(",")
+
+CHAT_IDS = [
+    chat_id.strip()
+    for chat_id in os.environ.get(
+        "TELEGRAM_CHAT_ID",
+        ""
+    ).split(",")
+    if chat_id.strip()
+]
 
 
 def send_message(message: str) -> bool:
     """
-    Sends a Telegram message.
+    Sends a Telegram message to all configured chat IDs.
 
     Returns True on success, False otherwise.
     """
@@ -16,11 +26,15 @@ def send_message(message: str) -> bool:
         print("Telegram is not configured.")
         return False
 
-    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+    url = (
+        f"https://api.telegram.org/"
+        f"bot{BOT_TOKEN}/sendMessage"
+    )
 
     try:
 
         for chat_id in CHAT_IDS:
+
             response = requests.post(
                 url,
                 json={
@@ -36,5 +50,6 @@ def send_message(message: str) -> bool:
         return True
 
     except Exception as e:
+
         print("Telegram error:", e)
         return False

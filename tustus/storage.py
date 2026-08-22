@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 
-DATA_FILE = Path("offers.json")
+DATA_FILE = Path(__file__).resolve().parent / "offers.json"
 
 
 def load_data():
@@ -23,7 +23,6 @@ def load_data():
     try:
 
         with DATA_FILE.open("r", encoding="utf-8") as f:
-
             data = json.load(f)
 
         if "offers" not in data:
