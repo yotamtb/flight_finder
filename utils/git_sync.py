@@ -24,7 +24,7 @@ GITHUB_OWNER = "yotamtb"
 GITHUB_REPO = "flight_finder"
 
 # Change this if your workflow has a different filename.
-GITHUB_WORKFLOW = "monitor_3.yml"
+GITHUB_WORKFLOW = "monitor.yml"
 
 GITHUB_API_URL = "https://api.github.com"
 
@@ -86,9 +86,20 @@ esac
 # Git command execution
 # ============================================================
 
-def _run_git(*args, check=True):
+def _run_git(*args, check=True, print_stdout=True):
     """
     Execute a Git command inside the repository.
+
+    Args:
+        check:
+            Raise an exception if Git returns a non-zero exit code.
+
+        print_stdout:
+            Whether to print stdout to the console.
+
+            This is disabled for commands such as `git show`
+            where stdout contains data that should not appear
+            in the log.
     """
 
     env, askpass_path = _git_env()
@@ -110,11 +121,19 @@ def _run_git(*args, check=True):
         except OSError:
             pass
 
-    if result.stdout.strip():
-        print(result.stdout.strip())
+    if print_stdout and result.stdout.strip():
+
+        print(
+            result.stdout.strip()
+        )
+
+    # Always print stderr.
 
     if result.stderr.strip():
-        print(result.stderr.strip())
+
+        print(
+            result.stderr.strip()
+        )
 
     if check and result.returncode != 0:
 
@@ -138,6 +157,7 @@ def fetch():
         "fetch",
         GIT_REMOTE,
         GIT_BRANCH,
+        print_stdout=False,
     )
 
 
@@ -146,11 +166,15 @@ def read_file(path):
     Read a file directly from origin/main.
 
     This does not modify the working tree.
+
+    stdout is intentionally suppressed so that the contents
+    of files such as offers.json are not written to cron.log.
     """
 
     result = _run_git(
         "show",
         f"{GIT_REMOTE}/{GIT_BRANCH}:{path}",
+        print_stdout=False,
     )
 
     return result.stdout
@@ -166,6 +190,7 @@ def has_changes(path):
         "--porcelain",
         "--",
         path,
+        print_stdout=False,
     )
 
     return bool(
@@ -182,16 +207,22 @@ def stage_file(path):
     included in our commit.
     """
 
+    # Clear existing staging.
+
     _run_git(
         "reset",
         "HEAD",
         "--",
+        print_stdout=False,
     )
+
+    # Stage only the requested file.
 
     _run_git(
         "add",
         "--",
         path,
+        print_stdout=False,
     )
 
 
@@ -204,6 +235,7 @@ def get_staged_files():
         "diff",
         "--cached",
         "--name-only",
+        print_stdout=False,
     )
 
     return [
@@ -224,6 +256,7 @@ def reset_staging():
         "reset",
         "HEAD",
         "--",
+        print_stdout=False,
     )
 
 
@@ -236,6 +269,7 @@ def commit(message):
         "commit",
         "-m",
         message,
+        print_stdout=False,
     )
 
 
@@ -253,6 +287,7 @@ def push():
         GIT_REMOTE,
         GIT_BRANCH,
         check=False,
+        print_stdout=False,
     )
 
     return result.returncode == 0
@@ -262,7 +297,7 @@ def reset_to_remote():
     """
     Reset the local branch to origin/main.
 
-    Uses --mixed so the working-tree changes are preserved
+    Uses --mixed so working-tree changes are preserved
     while local commits are removed from the branch.
     """
 
@@ -270,6 +305,7 @@ def reset_to_remote():
         "reset",
         "--mixed",
         f"{GIT_REMOTE}/{GIT_BRANCH}",
+        print_stdout=False,
     )
 
 
@@ -311,8 +347,6 @@ def github_action_is_running():
         "X-GitHub-Api-Version": "2026-03-10",
     }
 
-    # These are all states in which the workflow
-    # has not completed yet.
     active_statuses = (
         "in_progress",
         "queued",
