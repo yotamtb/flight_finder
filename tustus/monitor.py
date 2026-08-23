@@ -321,7 +321,8 @@ def scan():
     # Other notifications
     # ---------------------------------------------------------
 
-    send_notifications(notifications)
+    if not site_was_empty:
+        send_notifications(notifications)
 
     print("=" * 60)
     print(f"Scan time     : {local_now()}")
