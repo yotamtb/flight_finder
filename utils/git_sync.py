@@ -128,6 +128,7 @@ def _run_git(*args, check=True, print_stdout=True):
         )
 
     # Always print stderr.
+    # This includes useful Git messages and errors.
 
     if result.stderr.strip():
 
@@ -142,6 +143,33 @@ def _run_git(*args, check=True, print_stdout=True):
         )
 
     return result
+
+
+# ============================================================
+# Git identity
+# ============================================================
+
+def configure_git_identity():
+    """
+    Configure the Git identity used for commits.
+
+    The configuration is repository-local and does not
+    modify the global Git configuration.
+    """
+
+    _run_git(
+        "config",
+        "user.name",
+        "github-actions[bot]",
+        print_stdout=False,
+    )
+
+    _run_git(
+        "config",
+        "user.email",
+        "41898282+github-actions[bot]@users.noreply.github.com",
+        print_stdout=False,
+    )
 
 
 # ============================================================
@@ -264,6 +292,8 @@ def commit(message):
     """
     Commit the currently staged changes.
     """
+
+    configure_git_identity()
 
     _run_git(
         "commit",
