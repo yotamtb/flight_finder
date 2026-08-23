@@ -5,3 +5,9 @@ venv/
 .idea/
 cron.log
 /run_monitor.sh
+/github_merged_offers.json
+/github_offers.json
+/history.json
+/local_merged_offers.json
+/local_offers.json
+/old_offers.json
