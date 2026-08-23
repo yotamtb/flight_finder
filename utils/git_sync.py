@@ -1,9 +1,14 @@
-import json
 import os
 import subprocess
 import tempfile
 from pathlib import Path
 
+import requests
+
+
+# ============================================================
+# Repository configuration
+# ============================================================
 
 REPO_DIR = Path(__file__).resolve().parent.parent
 
@@ -11,8 +16,30 @@ GIT_REMOTE = "origin"
 GIT_BRANCH = "main"
 
 
+# ============================================================
+# GitHub configuration
+# ============================================================
+
+GITHUB_OWNER = "yotamtb"
+GITHUB_REPO = "flight_finder"
+
+# Change this if your workflow has a different filename.
+GITHUB_WORKFLOW = "monitor_3.yml"
+
+GITHUB_API_URL = "https://api.github.com"
+
+
+# ============================================================
+# Git environment
+# ============================================================
+
 def _git_env():
-    """Create Git environment using GITHUB_TOKEN."""
+    """
+    Build the environment used for authenticated Git commands.
+
+    Authentication is done using GITHUB_TOKEN through
+    Git's GIT_ASKPASS mechanism.
+    """
 
     token = os.environ.get("GITHUB_TOKEN")
 
@@ -42,21 +69,32 @@ esac
 
     askpass.close()
 
-    os.chmod(askpass.name, 0o700)
+    os.chmod(
+        askpass.name,
+        0o700,
+    )
 
     env = os.environ.copy()
+
     env["GIT_ASKPASS"] = askpass.name
     env["GIT_TERMINAL_PROMPT"] = "0"
 
     return env, askpass.name
 
 
-def _run_git(*args):
-    """Run a Git command."""
+# ============================================================
+# Git command execution
+# ============================================================
+
+def _run_git(*args, check=True):
+    """
+    Execute a Git command inside the repository.
+    """
 
     env, askpass_path = _git_env()
 
     try:
+
         result = subprocess.run(
             ["git", *args],
             cwd=REPO_DIR,
@@ -64,7 +102,9 @@ def _run_git(*args):
             capture_output=True,
             env=env,
         )
+
     finally:
+
         try:
             os.unlink(askpass_path)
         except OSError:
@@ -76,7 +116,8 @@ def _run_git(*args):
     if result.stderr.strip():
         print(result.stderr.strip())
 
-    if result.returncode != 0:
+    if check and result.returncode != 0:
+
         raise RuntimeError(
             f"Git command failed: git {' '.join(args)}"
         )
@@ -84,10 +125,14 @@ def _run_git(*args):
     return result
 
 
-def fetch():
-    """Fetch latest remote branch."""
+# ============================================================
+# Git operations
+# ============================================================
 
-    print("Fetching latest GitHub state...")
+def fetch():
+    """
+    Fetch the latest remote branch.
+    """
 
     _run_git(
         "fetch",
@@ -98,9 +143,9 @@ def fetch():
 
 def read_file(path):
     """
-    Return the content of a file from origin/main.
+    Read a file directly from origin/main.
 
-    The working tree is not modified.
+    This does not modify the working tree.
     """
 
     result = _run_git(
@@ -111,9 +156,9 @@ def read_file(path):
     return result.stdout
 
 
-def commit_and_push(path, message):
+def has_changes(path):
     """
-    Commit and push exactly one file.
+    Check whether a specific file has local changes.
     """
 
     result = _run_git(
@@ -123,9 +168,25 @@ def commit_and_push(path, message):
         path,
     )
 
-    if not result.stdout.strip():
-        print(f"{path} hasn't changed.")
-        return False
+    return bool(
+        result.stdout.strip()
+    )
+
+
+def stage_file(path):
+    """
+    Stage exactly one file.
+
+    First clears any existing staged changes so that
+    an unrelated staged file cannot accidentally be
+    included in our commit.
+    """
+
+    _run_git(
+        "reset",
+        "HEAD",
+        "--",
+    )
 
     _run_git(
         "add",
@@ -133,22 +194,43 @@ def commit_and_push(path, message):
         path,
     )
 
+
+def get_staged_files():
+    """
+    Return the files currently staged.
+    """
+
     result = _run_git(
         "diff",
         "--cached",
         "--name-only",
     )
 
-    staged = [
+    return [
         line.strip()
         for line in result.stdout.splitlines()
         if line.strip()
     ]
 
-    if staged != [path]:
-        raise RuntimeError(
-            f"Refusing to commit unexpected files: {staged}"
-        )
+
+def reset_staging():
+    """
+    Remove everything from the Git staging area.
+
+    Does not modify working-tree files.
+    """
+
+    _run_git(
+        "reset",
+        "HEAD",
+        "--",
+    )
+
+
+def commit(message):
+    """
+    Commit the currently staged changes.
+    """
 
     _run_git(
         "commit",
@@ -156,12 +238,119 @@ def commit_and_push(path, message):
         message,
     )
 
-    _run_git(
+
+def push():
+    """
+    Push the current branch.
+
+    Returns:
+        True  - push succeeded
+        False - push was rejected
+    """
+
+    result = _run_git(
         "push",
         GIT_REMOTE,
         GIT_BRANCH,
+        check=False,
     )
 
-    print(f"{path} pushed successfully.")
+    return result.returncode == 0
 
-    return True
+
+def reset_to_remote():
+    """
+    Reset the local branch to origin/main.
+
+    Uses --mixed so the working-tree changes are preserved
+    while local commits are removed from the branch.
+    """
+
+    _run_git(
+        "reset",
+        "--mixed",
+        f"{GIT_REMOTE}/{GIT_BRANCH}",
+    )
+
+
+# ============================================================
+# GitHub Actions
+# ============================================================
+
+def github_action_is_running():
+    """
+    Check whether the configured GitHub Actions workflow
+    currently has an active run on the main branch.
+
+    Returns:
+        True  - an active workflow run exists
+        False - no active workflow run exists
+
+    Raises:
+        RuntimeError if the GitHub API request fails.
+    """
+
+    token = os.environ.get("GITHUB_TOKEN")
+
+    if not token:
+        raise RuntimeError(
+            "GITHUB_TOKEN environment variable is not set."
+        )
+
+    url = (
+        f"{GITHUB_API_URL}/repos/"
+        f"{GITHUB_OWNER}/"
+        f"{GITHUB_REPO}/"
+        f"actions/workflows/"
+        f"{GITHUB_WORKFLOW}/runs"
+    )
+
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "Authorization": f"Bearer {token}",
+        "X-GitHub-Api-Version": "2026-03-10",
+    }
+
+    # These are all states in which the workflow
+    # has not completed yet.
+    active_statuses = (
+        "in_progress",
+        "queued",
+        "requested",
+        "waiting",
+        "pending",
+    )
+
+    for status in active_statuses:
+
+        params = {
+            "branch": GIT_BRANCH,
+            "status": status,
+            "per_page": 1,
+        }
+
+        try:
+
+            response = requests.get(
+                url,
+                headers=headers,
+                params=params,
+                timeout=20,
+            )
+
+            response.raise_for_status()
+
+        except requests.RequestException as e:
+
+            raise RuntimeError(
+                "GitHub API request failed: "
+                f"{e}"
+            ) from e
+
+        data = response.json()
+
+        if data.get("workflow_runs"):
+
+            return True
+
+    return False

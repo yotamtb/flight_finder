@@ -1,4 +1,4 @@
-name: Tustus Monitor 3
+name: Tustus Monitor
 
 on:
   workflow_dispatch:
@@ -8,15 +8,20 @@ on:
 
 permissions:
   contents: write
+  actions: read
 
 jobs:
   monitor:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
@@ -29,24 +34,10 @@ jobs:
         run: |
           playwright install --with-deps chromium
 
-      - name: Run monitor
+      - name: Run Tustus monitor
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          python monitor.py
-
-      - name: Commit database
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add offers.json
-
-          if git diff --cached --quiet; then
-            echo "No changes"
-            exit 0
-          fi
-
-          git commit -m "Update offers"
-          git push
+          python main.py tustus
