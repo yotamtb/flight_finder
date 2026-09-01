@@ -1,6 +1,5 @@
 {
   "offers": {
-    "_site_empty": true,
     "אלבניה - טיראנה|2026-07-07T16:55:00|2026-07-09T23:30:00": {
       "active": false,
       "departure": "2026-07-07T16:55:00",
@@ -3538,12 +3537,12 @@
       "return": "2026-08-22T17:20:00"
     },
     "כרתים - יוון|2026-08-24T16:50:00|2026-08-26T10:00:00": {
-      "active": true,
+      "active": false,
       "departure": "2026-08-24T16:50:00",
       "destination": "כרתים - יוון",
       "first_seen": "2026-08-23T17:30:17.665148+03:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/1b182e67-3049-4c09-befd-8c276451a8ad.jpg",
-      "last_seen": "2026-08-24T11:00:23.153855+03:00",
+      "last_seen": "2026-09-01T13:21:10.453028+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -7412,6 +7411,23 @@
       ],
       "remaining": 2,
       "return": "2026-08-21T10:30:00"
+    },
+    "קורפו - יוון|2026-09-02T16:45:00|2026-09-04T09:20:00": {
+      "active": true,
+      "departure": "2026-09-02T16:45:00",
+      "destination": "קורפו - יוון",
+      "first_seen": "2026-09-01T13:21:10.453028+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/f9772e25-e553-47be-888d-af3a0300bb90.jpg",
+      "last_seen": "2026-09-01T13:21:10.453028+03:00",
+      "price": 150.0,
+      "price_history": [
+        {
+          "date": "2026-09-01T13:21:10.453028+03:00",
+          "price": 150.0
+        }
+      ],
+      "remaining": null,
+      "return": "2026-09-04T09:20:00"
     },
     "קלמטה - יוון|2026-07-09T10:15:00|2026-07-12T10:55:00": {
       "active": false,
