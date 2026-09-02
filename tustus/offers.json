@@ -464,8 +464,8 @@
       "departure": "2026-09-02T19:05:00",
       "destination": "אלבניה - טיראנה",
       "first_seen": "2026-09-01T21:00:20.461939+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/4da6a16b-8981-4765-a247-57f60736f9c6.jpg",
-      "last_seen": "2026-09-02T11:00:18.209941+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/416f4416-25f2-41a9-953b-97a4202c4b65.jpg",
+      "last_seen": "2026-09-02T11:30:18.078032+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -6176,8 +6176,8 @@
       "departure": "2026-09-03T18:00:00",
       "destination": "סלוניקי - יוון",
       "first_seen": "2026-09-02T10:30:17.987676+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/f998fd56-d870-4020-b657-37157b4ec452.jpg",
-      "last_seen": "2026-09-02T11:00:18.209941+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/030aad1c-2b9e-45f8-a78a-c8f9e65a8ee5.jpg",
+      "last_seen": "2026-09-02T11:30:18.078032+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -7513,6 +7513,40 @@
       ],
       "remaining": null,
       "return": "2026-09-04T09:20:00"
+    },
+    "קורפו - יוון|2026-09-04T05:45:00|2026-09-11T09:35:00": {
+      "active": true,
+      "departure": "2026-09-04T05:45:00",
+      "destination": "קורפו - יוון",
+      "first_seen": "2026-09-02T11:30:18.078032+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/f9772e25-e553-47be-888d-af3a0300bb90.jpg",
+      "last_seen": "2026-09-02T11:30:18.078032+03:00",
+      "price": 150.0,
+      "price_history": [
+        {
+          "date": "2026-09-02T11:30:18.078032+03:00",
+          "price": 150.0
+        }
+      ],
+      "remaining": null,
+      "return": "2026-09-11T09:35:00"
+    },
+    "קורפו - יוון|2026-09-05T17:05:00|2026-09-11T09:35:00": {
+      "active": true,
+      "departure": "2026-09-05T17:05:00",
+      "destination": "קורפו - יוון",
+      "first_seen": "2026-09-02T11:30:18.078032+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/f9772e25-e553-47be-888d-af3a0300bb90.jpg",
+      "last_seen": "2026-09-02T11:30:18.078032+03:00",
+      "price": 150.0,
+      "price_history": [
+        {
+          "date": "2026-09-02T11:30:18.078032+03:00",
+          "price": 150.0
+        }
+      ],
+      "remaining": null,
+      "return": "2026-09-11T09:35:00"
     },
     "קלמטה - יוון|2026-07-09T10:15:00|2026-07-12T10:55:00": {
       "active": false,
