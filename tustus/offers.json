@@ -1938,6 +1938,23 @@
       "remaining": null,
       "return": "2026-09-04T11:00:00"
     },
+    "טיווט - מונטנגרו|2026-09-03T14:00:00|2026-09-08T08:00:00": {
+      "active": true,
+      "departure": "2026-09-03T14:00:00",
+      "destination": "טיווט - מונטנגרו",
+      "first_seen": "2026-09-02T16:00:18.312081+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/3f77ef1a-66c1-4268-bb06-3b67c5b809c1.jpg",
+      "last_seen": "2026-09-02T16:00:18.312081+03:00",
+      "price": 150.0,
+      "price_history": [
+        {
+          "date": "2026-09-02T16:00:18.312081+03:00",
+          "price": 150.0
+        }
+      ],
+      "remaining": null,
+      "return": "2026-09-08T08:00:00"
+    },
     "כרתים - יוון|2026-07-08T17:40:00|2026-07-10T18:00:00": {
       "active": false,
       "departure": "2026-07-08T17:40:00",
@@ -6176,8 +6193,8 @@
       "departure": "2026-09-03T18:00:00",
       "destination": "סלוניקי - יוון",
       "first_seen": "2026-09-02T10:30:17.987676+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/9beb6dd4-ab99-4a99-96b3-0eadacc929c9.jpg",
-      "last_seen": "2026-09-02T15:30:18.610990+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/d05c7c5d-dde7-42db-ab4e-af1e318101a4.jpg",
+      "last_seen": "2026-09-02T16:00:18.312081+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -6187,6 +6204,57 @@
       ],
       "remaining": 1,
       "return": "2026-09-07T17:50:00"
+    },
+    "סלוניקי - יוון|2026-09-03T18:00:00|2026-09-08T20:25:00": {
+      "active": true,
+      "departure": "2026-09-03T18:00:00",
+      "destination": "סלוניקי - יוון",
+      "first_seen": "2026-09-02T16:00:18.312081+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/d05c7c5d-dde7-42db-ab4e-af1e318101a4.jpg",
+      "last_seen": "2026-09-02T16:00:18.312081+03:00",
+      "price": 150.0,
+      "price_history": [
+        {
+          "date": "2026-09-02T16:00:18.312081+03:00",
+          "price": 150.0
+        }
+      ],
+      "remaining": 1,
+      "return": "2026-09-08T20:25:00"
+    },
+    "סלוניקי - יוון|2026-09-05T19:55:00|2026-09-07T17:50:00": {
+      "active": true,
+      "departure": "2026-09-05T19:55:00",
+      "destination": "סלוניקי - יוון",
+      "first_seen": "2026-09-02T16:00:18.312081+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/d05c7c5d-dde7-42db-ab4e-af1e318101a4.jpg",
+      "last_seen": "2026-09-02T16:00:18.312081+03:00",
+      "price": 150.0,
+      "price_history": [
+        {
+          "date": "2026-09-02T16:00:18.312081+03:00",
+          "price": 150.0
+        }
+      ],
+      "remaining": 1,
+      "return": "2026-09-07T17:50:00"
+    },
+    "סלוניקי - יוון|2026-09-05T19:55:00|2026-09-08T20:25:00": {
+      "active": true,
+      "departure": "2026-09-05T19:55:00",
+      "destination": "סלוניקי - יוון",
+      "first_seen": "2026-09-02T16:00:18.312081+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/d05c7c5d-dde7-42db-ab4e-af1e318101a4.jpg",
+      "last_seen": "2026-09-02T16:00:18.312081+03:00",
+      "price": 150.0,
+      "price_history": [
+        {
+          "date": "2026-09-02T16:00:18.312081+03:00",
+          "price": 150.0
+        }
+      ],
+      "remaining": null,
+      "return": "2026-09-08T20:25:00"
     },
     "פודגוריצה - מונטנגרו|2026-07-26T19:00:00|2026-08-02T20:00:00": {
       "active": false,
@@ -7519,8 +7587,8 @@
       "departure": "2026-09-04T05:45:00",
       "destination": "קורפו - יוון",
       "first_seen": "2026-09-02T11:30:18.078032+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/f9772e25-e553-47be-888d-af3a0300bb90.jpg",
-      "last_seen": "2026-09-02T15:30:18.610990+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/ae45e5fc-2a3c-483a-a1ec-99987ad91d11.jpg",
+      "last_seen": "2026-09-02T16:00:18.312081+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -7536,8 +7604,8 @@
       "departure": "2026-09-05T17:05:00",
       "destination": "קורפו - יוון",
       "first_seen": "2026-09-02T11:30:18.078032+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/f9772e25-e553-47be-888d-af3a0300bb90.jpg",
-      "last_seen": "2026-09-02T15:30:18.610990+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/ae45e5fc-2a3c-483a-a1ec-99987ad91d11.jpg",
+      "last_seen": "2026-09-02T16:00:18.312081+03:00",
       "price": 150.0,
       "price_history": [
         {
