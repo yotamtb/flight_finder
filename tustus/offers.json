@@ -1462,6 +1462,40 @@
       "remaining": null,
       "return": "2026-09-11T11:15:00"
     },
+    "בטומי - גאורגיה|2026-09-10T05:00:00|2026-09-17T11:15:00": {
+      "active": true,
+      "departure": "2026-09-10T05:00:00",
+      "destination": "בטומי - גאורגיה",
+      "first_seen": "2026-09-09T13:30:19.419332+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/51aa3131-cf77-416b-bd25-bbfd75de6428.jpg",
+      "last_seen": "2026-09-09T13:30:19.419332+03:00",
+      "price": 150.0,
+      "price_history": [
+        {
+          "date": "2026-09-09T13:30:19.419332+03:00",
+          "price": 150.0
+        }
+      ],
+      "remaining": null,
+      "return": "2026-09-17T11:15:00"
+    },
+    "בטומי - גאורגיה|2026-09-10T16:05:00|2026-09-17T11:15:00": {
+      "active": true,
+      "departure": "2026-09-10T16:05:00",
+      "destination": "בטומי - גאורגיה",
+      "first_seen": "2026-09-09T13:30:19.419332+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/51aa3131-cf77-416b-bd25-bbfd75de6428.jpg",
+      "last_seen": "2026-09-09T13:30:19.419332+03:00",
+      "price": 150.0,
+      "price_history": [
+        {
+          "date": "2026-09-09T13:30:19.419332+03:00",
+          "price": 150.0
+        }
+      ],
+      "remaining": null,
+      "return": "2026-09-17T11:15:00"
+    },
     "בטומי - גאורגיה|2026-09-10T23:00:00|2026-09-11T11:15:00": {
       "active": false,
       "departure": "2026-09-10T23:00:00",
@@ -2504,8 +2538,8 @@
       "departure": "2026-09-10T14:00:00",
       "destination": "טיווט - מונטנגרו",
       "first_seen": "2026-09-08T13:30:18.212988+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/3f77ef1a-66c1-4268-bb06-3b67c5b809c1.jpg",
-      "last_seen": "2026-09-09T13:00:20.539837+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/def1e194-5463-4168-8827-75360475c316.jpg",
+      "last_seen": "2026-09-09T13:30:19.419332+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -6669,8 +6703,8 @@
       "departure": "2026-09-09T20:25:00",
       "destination": "לרנקה - קפריסין",
       "first_seen": "2026-09-07T18:00:18.782886+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/aa658446-bc07-462b-8d0e-4fb967f5f58d.jpg",
-      "last_seen": "2026-09-09T13:00:20.539837+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/15b459ae-be59-491c-a451-891bd5fef104.jpg",
+      "last_seen": "2026-09-09T13:30:19.419332+03:00",
       "price": 100.0,
       "price_history": [
         {
@@ -7615,6 +7649,23 @@
       ],
       "remaining": 3,
       "return": "2026-07-24T12:30:00"
+    },
+    "פראג - צ'כיה|2026-09-10T14:10:00|2026-09-17T18:40:00": {
+      "active": true,
+      "departure": "2026-09-10T14:10:00",
+      "destination": "פראג - צ'כיה",
+      "first_seen": "2026-09-09T13:30:19.419332+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/4e6b12f2-57fb-4746-9138-628168ccccb3.jpg",
+      "last_seen": "2026-09-09T13:30:19.419332+03:00",
+      "price": 150.0,
+      "price_history": [
+        {
+          "date": "2026-09-09T13:30:19.419332+03:00",
+          "price": 150.0
+        }
+      ],
+      "remaining": null,
+      "return": "2026-09-17T18:40:00"
     },
     "קורפו - יוון|2026-07-10T17:20:00|2026-07-12T09:40:00": {
       "active": false,
@@ -10902,8 +10953,8 @@
       "departure": "2026-09-10T16:10:00",
       "destination": "רומא - איטליה",
       "first_seen": "2026-09-07T18:00:18.782886+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/7b32a435-2c37-4e65-a6e8-8455db432b9c.jpg",
-      "last_seen": "2026-09-09T13:00:20.539837+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/59721f89-5acf-442e-817c-2ba9008bbbdc.jpg",
+      "last_seen": "2026-09-09T13:30:19.419332+03:00",
       "price": 150.0,
       "price_history": [
         {
