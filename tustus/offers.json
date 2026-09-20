@@ -6307,6 +6307,40 @@
       "remaining": null,
       "return": "2026-09-25T18:00:00"
     },
+    "כרתים - יוון|2026-09-22T14:50:00|2026-09-24T11:00:00": {
+      "active": true,
+      "departure": "2026-09-22T14:50:00",
+      "destination": "כרתים - יוון",
+      "first_seen": "2026-09-20T09:43:26.036318+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/0ca38d3f-bc0f-4125-b7f8-46d4b99f0a11.jpg",
+      "last_seen": "2026-09-20T09:43:26.036318+03:00",
+      "price": 150.0,
+      "price_history": [
+        {
+          "date": "2026-09-20T09:43:26.036318+03:00",
+          "price": 150.0
+        }
+      ],
+      "remaining": null,
+      "return": "2026-09-24T11:00:00"
+    },
+    "כרתים - יוון|2026-09-22T14:50:00|2026-09-25T18:00:00": {
+      "active": true,
+      "departure": "2026-09-22T14:50:00",
+      "destination": "כרתים - יוון",
+      "first_seen": "2026-09-20T09:43:26.036318+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/0ca38d3f-bc0f-4125-b7f8-46d4b99f0a11.jpg",
+      "last_seen": "2026-09-20T09:43:26.036318+03:00",
+      "price": 150.0,
+      "price_history": [
+        {
+          "date": "2026-09-20T09:43:26.036318+03:00",
+          "price": 150.0
+        }
+      ],
+      "remaining": null,
+      "return": "2026-09-25T18:00:00"
+    },
     "לרנקה - קפריסין|2026-07-07T22:10:00|2026-07-13T08:20:00": {
       "active": false,
       "departure": "2026-07-07T22:10:00",
@@ -9368,12 +9402,12 @@
       "return": "2026-09-20T07:00:00"
     },
     "לרנקה - קפריסין|2026-09-20T10:00:00|2026-09-23T08:20:00": {
-      "active": true,
+      "active": false,
       "departure": "2026-09-20T10:00:00",
       "destination": "לרנקה - קפריסין",
       "first_seen": "2026-09-18T22:34:07.350382+03:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/aa658446-bc07-462b-8d0e-4fb967f5f58d.jpg",
-      "last_seen": "2026-09-20T09:06:17.412093+03:00",
+      "last_seen": "2026-09-20T09:43:26.036318+03:00",
       "price": 100.0,
       "price_history": [
         {
@@ -9385,12 +9419,12 @@
       "return": "2026-09-23T08:20:00"
     },
     "לרנקה - קפריסין|2026-09-20T10:00:00|2026-09-24T08:20:00": {
-      "active": true,
+      "active": false,
       "departure": "2026-09-20T10:00:00",
       "destination": "לרנקה - קפריסין",
       "first_seen": "2026-09-18T22:34:07.350382+03:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/d85a8f6c-5ec8-4ed4-9371-fa108d49a638.jpg",
-      "last_seen": "2026-09-20T09:06:17.412093+03:00",
+      "last_seen": "2026-09-20T09:43:26.036318+03:00",
       "price": 100.0,
       "price_history": [
         {
