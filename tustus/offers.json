@@ -583,8 +583,8 @@
       "departure": "2026-09-25T19:05:00",
       "destination": "אלבניה - טיראנה",
       "first_seen": "2026-09-22T21:13:00.639256+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/ee5cc53f-a022-46c9-b8ad-af78e6dc53ca.jpg",
-      "last_seen": "2026-09-24T16:00:19.873360+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/9590d71a-0d35-4684-9a0f-ca7bcc91ed6b.jpg",
+      "last_seen": "2026-09-24T16:30:21.408926+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -601,7 +601,7 @@
       "destination": "אלבניה - טיראנה",
       "first_seen": "2026-09-22T21:13:00.639256+03:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/ee5cc53f-a022-46c9-b8ad-af78e6dc53ca.jpg",
-      "last_seen": "2026-09-24T16:00:19.873360+03:00",
+      "last_seen": "2026-09-24T16:30:21.408926+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -2334,8 +2334,8 @@
       "departure": "2026-09-26T22:00:00",
       "destination": "אתונה - יוון",
       "first_seen": "2026-09-22T21:13:00.639256+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/ec8691ee-e8e5-448e-b6ce-1c86972b3adb.jpg",
-      "last_seen": "2026-09-24T16:00:19.873360+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/f8e636ac-4478-4e99-a86f-46865f23711e.jpg",
+      "last_seen": "2026-09-24T16:30:21.408926+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -15713,8 +15713,8 @@
       "departure": "2026-09-26T17:10:00",
       "destination": "רומא - איטליה",
       "first_seen": "2026-09-23T18:00:19.163387+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/6ff92c43-1beb-4156-944d-0d60b2d3c439.jpg",
-      "last_seen": "2026-09-24T16:00:19.873360+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/13d52ae8-f926-47ef-bed4-10e116603398.jpg",
+      "last_seen": "2026-09-24T16:30:21.408926+03:00",
       "price": 150.0,
       "price_history": [
         {
