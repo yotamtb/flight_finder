@@ -617,8 +617,8 @@
       "departure": "2026-09-27T21:45:00",
       "destination": "אלבניה - טיראנה",
       "first_seen": "2026-09-24T17:56:02.491858+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/ee5cc53f-a022-46c9-b8ad-af78e6dc53ca.jpg",
-      "last_seen": "2026-09-26T13:00:18.744826+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/9590d71a-0d35-4684-9a0f-ca7bcc91ed6b.jpg",
+      "last_seen": "2026-09-26T13:30:19.119242+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -2471,7 +2471,7 @@
       "destination": "אתונה - יוון",
       "first_seen": "2026-09-24T17:56:02.491858+03:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/b30708b1-cdc8-4e6c-add1-d43fe50308c4.jpg",
-      "last_seen": "2026-09-26T13:00:18.744826+03:00",
+      "last_seen": "2026-09-26T13:30:19.119242+03:00",
       "price": 150.0,
       "price_history": [
         {
