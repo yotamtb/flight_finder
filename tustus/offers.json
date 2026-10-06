@@ -838,8 +838,8 @@
       "departure": "2026-10-08T19:30:00",
       "destination": "אלבניה - טיראנה",
       "first_seen": "2026-10-05T19:01:11.103669+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/4da6a16b-8981-4765-a247-57f60736f9c6.jpg",
-      "last_seen": "2026-10-06T21:00:19.062710+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/9590d71a-0d35-4684-9a0f-ca7bcc91ed6b.jpg",
+      "last_seen": "2026-10-06T21:30:20.213409+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -855,8 +855,8 @@
       "departure": "2026-10-08T19:30:00",
       "destination": "אלבניה - טיראנה",
       "first_seen": "2026-10-05T19:01:11.103669+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/4da6a16b-8981-4765-a247-57f60736f9c6.jpg",
-      "last_seen": "2026-10-06T21:00:19.062710+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/9590d71a-0d35-4684-9a0f-ca7bcc91ed6b.jpg",
+      "last_seen": "2026-10-06T21:30:20.213409+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -4794,13 +4794,30 @@
       "remaining": 2,
       "return": "2026-10-10T18:40:00"
     },
+    "בטומי - גאורגיה|2026-10-07T07:00:00|2026-10-11T20:45:00": {
+      "active": true,
+      "departure": "2026-10-07T07:00:00",
+      "destination": "בטומי - גאורגיה",
+      "first_seen": "2026-10-06T21:30:20.213409+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/737a682a-ec32-473b-ad31-d22881e59893.jpg",
+      "last_seen": "2026-10-06T21:30:20.213409+03:00",
+      "price": 150.0,
+      "price_history": [
+        {
+          "date": "2026-10-06T21:30:20.213409+03:00",
+          "price": 150.0
+        }
+      ],
+      "remaining": 1,
+      "return": "2026-10-11T20:45:00"
+    },
     "בטומי - גאורגיה|2026-10-07T07:00:00|2026-10-12T11:15:00": {
-      "active": false,
+      "active": true,
       "departure": "2026-10-07T07:00:00",
       "destination": "בטומי - גאורגיה",
       "first_seen": "2026-10-04T11:40:06.161045+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/7165a5b9-f396-4bac-b42e-c726aea4cc21.jpg",
-      "last_seen": "2026-10-05T19:01:11.103669+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/737a682a-ec32-473b-ad31-d22881e59893.jpg",
+      "last_seen": "2026-10-06T21:30:20.213409+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -4808,8 +4825,25 @@
           "price": 150.0
         }
       ],
-      "remaining": 2,
+      "remaining": 1,
       "return": "2026-10-12T11:15:00"
+    },
+    "בטומי - גאורגיה|2026-10-07T07:00:00|2026-10-13T11:15:00": {
+      "active": true,
+      "departure": "2026-10-07T07:00:00",
+      "destination": "בטומי - גאורגיה",
+      "first_seen": "2026-10-06T21:30:20.213409+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/737a682a-ec32-473b-ad31-d22881e59893.jpg",
+      "last_seen": "2026-10-06T21:30:20.213409+03:00",
+      "price": 150.0,
+      "price_history": [
+        {
+          "date": "2026-10-06T21:30:20.213409+03:00",
+          "price": 150.0
+        }
+      ],
+      "remaining": 4,
+      "return": "2026-10-13T11:15:00"
     },
     "בטומי - גאורגיה|2026-10-08T07:00:00|2026-10-10T18:40:00": {
       "active": false,
@@ -14965,8 +14999,8 @@
       "departure": "2026-10-08T06:55:00",
       "destination": "מילאנו - איטליה",
       "first_seen": "2026-10-05T19:01:11.103669+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/8417e8b6-fc54-458b-9cc7-319139ea286e.jpg",
-      "last_seen": "2026-10-06T21:00:19.062710+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/c6341949-1f09-4d3d-9162-d991b5284921.jpg",
+      "last_seen": "2026-10-06T21:30:20.213409+03:00",
       "price": 150.0,
       "price_history": [
         {
@@ -14982,8 +15016,8 @@
       "departure": "2026-10-08T06:55:00",
       "destination": "מילאנו - איטליה",
       "first_seen": "2026-10-05T19:01:11.103669+03:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/8417e8b6-fc54-458b-9cc7-319139ea286e.jpg",
-      "last_seen": "2026-10-06T21:00:19.062710+03:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/c6341949-1f09-4d3d-9162-d991b5284921.jpg",
+      "last_seen": "2026-10-06T21:30:20.213409+03:00",
       "price": 150.0,
       "price_history": [
         {
