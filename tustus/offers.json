@@ -10885,8 +10885,8 @@
       "departure": "2026-11-08T08:50:00",
       "destination": "ברצלונה - ספרד",
       "first_seen": "2026-11-04T11:30:17.878195+02:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/4416e9c9-cd63-4c1f-a7a3-e79e846b8e1b.jpg",
-      "last_seen": "2026-11-07T12:30:12.529468+02:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/b0c26757-b2dd-4797-b77b-c5c0a00b6d95.jpg",
+      "last_seen": "2026-11-07T13:00:11.475135+02:00",
       "price": 150.0,
       "price_history": [
         {
@@ -12054,12 +12054,12 @@
       "return": "2026-11-06T12:20:00"
     },
     "טביליסי - גאורגיה|2026-11-07T17:45:00|2026-11-10T15:05:00": {
-      "active": true,
+      "active": false,
       "departure": "2026-11-07T17:45:00",
       "destination": "טביליסי - גאורגיה",
       "first_seen": "2026-11-04T11:30:17.878195+02:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/774f6218-e2f1-480c-bdd0-98327998d585.jpg",
-      "last_seen": "2026-11-07T12:30:12.529468+02:00",
+      "last_seen": "2026-11-07T13:00:11.475135+02:00",
       "price": 150.0,
       "price_history": [
         {
@@ -12071,12 +12071,12 @@
       "return": "2026-11-10T15:05:00"
     },
     "טביליסי - גאורגיה|2026-11-07T17:45:00|2026-11-11T20:55:00": {
-      "active": true,
+      "active": false,
       "departure": "2026-11-07T17:45:00",
       "destination": "טביליסי - גאורגיה",
       "first_seen": "2026-11-04T11:30:17.878195+02:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/774f6218-e2f1-480c-bdd0-98327998d585.jpg",
-      "last_seen": "2026-11-07T12:30:12.529468+02:00",
+      "last_seen": "2026-11-07T13:00:11.475135+02:00",
       "price": 150.0,
       "price_history": [
         {
