@@ -11663,12 +11663,12 @@
       "return": "2026-11-19T14:00:00"
     },
     "ברצלונה - ספרד|2026-11-15T15:35:00|2026-11-19T14:00:00": {
-      "active": true,
+      "active": false,
       "departure": "2026-11-15T15:35:00",
       "destination": "ברצלונה - ספרד",
       "first_seen": "2026-11-12T13:00:18.173094+02:00",
       "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/11068dd1-f03c-49b0-a1c3-0d39099b80cb.jpg",
-      "last_seen": "2026-11-15T09:30:36.743154+02:00",
+      "last_seen": "2026-11-15T10:00:14.651443+02:00",
       "price": 150.0,
       "price_history": [
         {
@@ -29126,8 +29126,8 @@
       "departure": "2026-11-16T10:00:00",
       "destination": "פראג - צ'כיה",
       "first_seen": "2026-11-12T13:00:18.173094+02:00",
-      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/6afb1099-0905-45b4-9e3a-e34ec7887d76.jpg",
-      "last_seen": "2026-11-15T09:30:36.743154+02:00",
+      "image": "https://res.cloudinary.com/arkia/image/upload/ARKIA_Destinations/4e6b12f2-57fb-4746-9138-628168ccccb3.jpg",
+      "last_seen": "2026-11-15T10:00:14.651443+02:00",
       "price": 150.0,
       "price_history": [
         {
